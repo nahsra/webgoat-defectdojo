@@ -38,9 +38,9 @@ jobs:
         id: import-scan-results-into-defectdojo
         uses: portswigger-cloud/defectdojo-github-action@v1
         with:
-          defectdojo-url: https://pixee-test.cloud.defectdojo.com/
-          defectdojo-username: ${{ secrets.defectdojo-username }}
-          defectdojo-password: ${{ secrets.defectdojo-password }}
+          defectdojo-url: ${{ secrets.defectdojo_url }}
+          defectdojo-username: ${{ secrets.defectdojo_username }}
+          defectdojo-password: ${{ secrets.defectdojo_password }}
           defectdojo-product-type: example-product-type
           defectdojo-product: example-product
           defectdojo-environment-type: Production
