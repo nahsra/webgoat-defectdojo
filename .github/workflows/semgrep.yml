@@ -16,7 +16,7 @@ jobs:
         id: semgrep-scan
         run: |
           mkdir -p semgrep/results
-          semgrep --config auto --error --json --output=semgrep/results/semgrep.json
+          semgrep ci --config auto --json --output=semgrep/results/semgrep.json
       - name: upload semgrep results
         id: upload-semgrep-results
         if: always()
