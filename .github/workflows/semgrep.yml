@@ -36,7 +36,7 @@ jobs:
           name: semgrep-results
       - name: import scan results into defectdojo
         id: import-scan-results-into-defectdojo
-        uses: portswigger-cloud/defectdojo-github-action@v1
+        uses: portswigger-cloud/defectdojo-import-scan@v1.0.1
         with:
           defectdojo-url: ${{ secrets.defectdojo_url }}
           defectdojo-username: ${{ secrets.defectdojo_username }}
