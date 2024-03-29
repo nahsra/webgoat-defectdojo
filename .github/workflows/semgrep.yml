@@ -14,7 +14,7 @@ jobs:
       - name: semgrep scan
         run: |
           mkdir -p semgrep/results
-          semgrep --debug --config auto --include='*SqlInjection*.java' --json --output=semgrep/results/semgrep.json
+          semgrep --config auto --include='*SqlInjection*.java' --json --output=semgrep/results/semgrep.json
       - name: import scan results into defectdojo
         run: |
           curl -X POST "${{ secrets.defectdojo_url }}/api/v2/import-scan/" \
