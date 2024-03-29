@@ -25,7 +25,7 @@ jobs:
             -F "scan_type=Semgrep JSON Report" \
             -F "file=@semgrep/results/semgrep.json;type=application/json" \
             -F "tags=github_actions;ci" \
-            -F "source_code_management_uri=${{ github.server_url }}/${{ github.repository }}"
+            -F "source_code_management_uri=${{ github.server_url }}/${{ github.repository }}" \
             -F "branch_tag=${{ github.ref }}" \
             -F "commit_hash=${{ github.sha }}" \
-            -F "close_old_findings=true" \
+            -F "close_old_findings=true"
