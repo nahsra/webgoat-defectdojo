@@ -28,6 +28,7 @@ jobs:
             -F "auto_create_context=true" \
             -F "engagement_name=webgoat_ci_scan" \
             -F "product_name=webgoat_demo" \
+            -F "product_type_name=typical_app" \
             -F "source_code_management_uri=${{ github.server_url }}/${{ github.repository }}" \
             -F "branch_tag=${{ github.ref }}" \
             -F "commit_hash=${{ github.sha }}" \
