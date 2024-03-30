@@ -25,6 +25,7 @@ jobs:
             -F "scan_type=Semgrep JSON Report" \
             -F "file=@semgrep/results/semgrep.json;type=application/json" \
             -F "tags=github_actions,ci" \
+            -F "auto_create_context=true" \
             -F "engagement_name=webgoat_ci_scan" \
             -F "product_name=webgoat_demo" \
             -F "source_code_management_uri=${{ github.server_url }}/${{ github.repository }}" \
